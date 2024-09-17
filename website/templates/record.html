@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content%}
+
+<div>
+    <ul class="list-group">
+        <li class="list-group-item active" aria-current="true"> <strong>Full
+                Name: </strong>{{customer_record.name}} </li>
+        <li class="list-group-item"><strong>Designation: </strong>{{customer_record.designation}}</li>
+        <li class="list-group-item"><strong>Phone No: </strong>{{customer_record.phone_number}}</li>
+        <li class="list-group-item"><strong>Salary: </strong>{{customer_record.salary}}</li>
+        <li class="list-group-item"><strong>Description: </strong>{{customer_record.description}}</li>
+    </ul>
+</div>
+
+<menu>
+    <a href="{% url 'home' %}" class="btn btn-secondary">Back</a>
+    <a href="{% url 'delete_record' customer_record.id %}" class="btn btn-danger">Delete</a>
+    <a href="{% url 'update_record' customer_record.id %}" class="btn btn-secondary">Update</a>
+</menu>
+
+{% endblock %}
