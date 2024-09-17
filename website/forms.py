@@ -38,26 +38,42 @@ def __init__(self, *args, **kwargs):
 
 # create add record form
 
-
 class AddRecordForm(forms.ModelForm):
-    name = forms.CharField(required=True, widget=forms.widgets.TextInput(
-        attrs={"placeholder": "Full Name", "class": "form-control"}), label="")
+    name = forms.CharField(
+        required=True,
+        widget=forms.TextInput(attrs={"placeholder": "Full Name", "class": "form-control"}),
+        label=""
+    )
     
-    designation = forms.CharField(required=True, widget=forms.widgets.TextInput(
-        attrs={"placeholder": "Designation", "class": "form-control"}), label="")
+    designation = forms.CharField(
+        required=True,
+        widget=forms.TextInput(attrs={"placeholder": "Designation", "class": "form-control"}),
+        label=""
+    )
     
-    phone = forms.CharField(required=True, widget=forms.widgets.TextInput(
-        attrs={"placeholder": "Phone Number", "class": "form-control"}), label="")
+    phone_number = forms.CharField(
+        required=True,
+        widget=forms.TextInput(attrs={"placeholder": "Phone Number", "class": "form-control"}),
+        label=""
+    )
     
-    salary = forms.CharField(required=True, widget=forms.widgets.TextInput(
-        attrs={"placeholder": "Salary", "class": "form-control"}), label="")
+    salary = forms.CharField(
+        required=True,
+        widget=forms.TextInput(attrs={"placeholder": "Salary", "class": "form-control"}),
+        label=""
+    )
     
-    address = forms.CharField(required=True, widget=forms.widgets.TextInput(
-        attrs={"placeholder": "Address", "class": "form-control"}), label="")
+    address = forms.CharField(
+        required=True,
+        widget=forms.TextInput(attrs={"placeholder": "Address", "class": "form-control"}),
+        label=""
+    )
     
-    description = forms.CharField(required=True, widget=forms.widgets.TextInput(
-        attrs={"placeholder": "Description", "class": "form-control"}), label="")
-    
+    description = forms.CharField(
+        required=True,
+        widget=forms.Textarea(attrs={"placeholder": "Description", "class": "form-control"}),
+        label=""
+    )
     
     class Meta:
         model = Record
